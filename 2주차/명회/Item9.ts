@@ -16,6 +16,9 @@ const user2 = {
   name: "hi",
 } as User;
 
+const $button1 = document.querySelector(".button") as HTMLElement;
+const $button2 = document.querySelector(".button")!;
+
 // 컴파일러보다 개발자가 해당 타입을 더 잘 알고 있을 때 사용
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
