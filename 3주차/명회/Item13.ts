@@ -23,6 +23,10 @@ type Modal2 = {
 type ConfirmModal2 = Modal2 & {
   callBack: () => void;
 };
+type ConfirmModal22 = {
+  callBack: () => void;
+} & Modal2;
+
 const confirmModal2: ConfirmModal2 = {
   type: "confirm",
   text: "결제를 진행하시겠습니까?",
