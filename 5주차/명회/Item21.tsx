@@ -15,3 +15,12 @@ let id = 1;
 let user = { username: "hello", age: 20 };
 
 getUserInfo(user, id); // Argument of type 'number' is not assignable to parameter of type '1 | 2 | 3'.
+// --> 할당 시점에 타입 넓히기가 동작하여 number 타입으로 추론되었기 때문에 오류 발생
+
+// 타입 넓히기 과정 제어
+// 1) const 선언
+const id2 = 2;
+let user2 = { username: "hi", age: 21 };
+getUserInfo(user2, id2);
+// 정상 작동
+// --> const id2는 재할당이 불가능하기에 가장 좁은 타입인 2로 추론
