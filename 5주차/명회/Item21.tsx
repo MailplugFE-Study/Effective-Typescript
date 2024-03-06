@@ -24,3 +24,17 @@ let user2 = { username: "hi", age: 21 };
 getUserInfo(user2, id2);
 // 정상 작동
 // --> const id2는 재할당이 불가능하기에 가장 좁은 타입인 2로 추론
+
+// 2) const 단언문 사용 (변수 선언에 사용되는 const 와 혼동 X)
+const v1 = {
+  x: 1,
+  y: 2,
+}; // { x: number; y: number; }
+const v2 = {
+  x: 1 as const,
+  y: 2,
+}; // { x:1 , y: number; }
+const v3 = {
+  x: 1,
+  y: 2,
+} as const; // { readonly x: 1; readonly y: 2}
