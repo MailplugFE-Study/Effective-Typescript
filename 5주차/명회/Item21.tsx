@@ -11,7 +11,8 @@ const getUserInfo = (user: UserInfo, id: 1 | 2 | 3) => {
   return user[id];
 };
 
-let id = 1;
+// 타입을 명시하지 않았으므로 타입 추론. 후보군은 any, number, 1
+let id = 1; // id는 let으로 선언되었기 때문에 다른 number로 재할당 가능할 수 있어 최종적으로 number로 추론
 let user = { username: "hello", age: 20 };
 
 getUserInfo(user, id); // Argument of type 'number' is not assignable to parameter of type '1 | 2 | 3'.
@@ -19,7 +20,7 @@ getUserInfo(user, id); // Argument of type 'number' is not assignable to paramet
 
 // 타입 넓히기 과정 제어
 // 1) const 선언
-const id2 = 2;
+const id2 = 2; // 다른 number로 재할당이 불가능하여 최종적으로 2로 추론
 let user2 = { username: "hi", age: 21 };
 getUserInfo(user2, id2);
 // 정상 작동
