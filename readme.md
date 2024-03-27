@@ -10,3 +10,4 @@
 - 자율적으로 깃허브에 공부한 내용 업로드
 
 ## 📚스터디 자료
+![image](https://github.com/MailplugFE-Study/Effective-Typescript/assets/72850354/5ed5dfbb-cfc2-46c3-9c8c-fcf042ef50be)
